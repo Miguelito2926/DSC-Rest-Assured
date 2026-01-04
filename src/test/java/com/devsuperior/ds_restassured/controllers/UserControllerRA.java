@@ -1,6 +1,6 @@
 package com.devsuperior.ds_restassured.controllers;
 
-import com.devsuperior.dscommerce.tests.TokenUtil;
+import com.devsuperior.ds_restassured.test.TokenUtil;
 import io.restassured.http.ContentType;
 import org.json.JSONException;
 import org.junit.jupiter.api.BeforeEach;
@@ -24,8 +24,8 @@ public class UserControllerRA {
 		adminUsername = "alex@gmail.com";
 		adminPassword = "123456";
 		
-		clientToken = TokenUtil.obtainAccessToken(clientUsername, clientPassword);
-		adminToken = TokenUtil.obtainAccessToken(adminUsername, adminPassword);
+		clientToken = TokenUtil.getAccessToken(clientUsername, clientPassword);
+		adminToken = TokenUtil.getAccessToken(adminUsername, adminPassword);
 		invalidToken = adminToken + "xpto";
 	}
 	
